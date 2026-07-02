@@ -26,19 +26,19 @@ const GithubIcon = ({ size = 20, className = "" }) => (
 export default function Projects() {
   const projects = [
     {
-      title: "Kitab — Bookshop Management",
+      title: "Kitab — Bookshop Management System",
       description: "A complete MERN-stack Bookshop Management System featuring a customer storefront, authenticated admin dashboard, inventory management, bulk CSV catalog import, secure ordering, and staff billing workflow.",
       technologies: ["React", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
-      image: "/images/laptop_mockup.jpg",
+      image: "/images/kitab.png",
       liveLink: "https://kitab-bookshop.vercel.app/",
-      githubLink: "https://github.com/Athira132",
+      githubLink: "https://github.com/Athira132/PORTFOLIO",
     },
     {
       title: "Cafe Management System",
       description: "A multi-role cafe management system with custom dashboards for Owners, Staff, and Customers. Includes secure JWT token authentication, granular Role-Based Access Control, live order tracking, menu editors, and revenue analytics.",
       technologies: ["Node.js", "Express", "JavaScript", "HTML5", "CSS3"],
-      image: "/images/project_preview_3.jpg",
-      liveLink: "#",
+      image: "/images/cafe.jpg",
+      liveLink: "https://github.com/Athira132",
       githubLink: "https://github.com/Athira132",
     },
   ];
@@ -69,7 +69,7 @@ export default function Projects() {
             return (
               <div
                 key={project.title}
-                className={`grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center`}
+                className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center"
               >
                 {/* Project Image Frame (Left on Even, Right on Odd) */}
                 <motion.div
@@ -79,7 +79,12 @@ export default function Projects() {
                   transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] as any }}
                   className={`lg:col-span-7 ${isEven ? "lg:order-1" : "lg:order-2"}`}
                 >
-                  <div className="relative group overflow-hidden rounded-2xl border border-white/10 bg-card-bg shadow-2xl aspect-[16/10] cursor-pointer">
+                  <a
+                    href={project.liveLink}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="block relative group overflow-hidden rounded-2xl border border-white/10 hover:border-electric-blue/40 bg-card-bg shadow-2xl hover:shadow-xl hover:shadow-electric-blue/10 aspect-[16/10] cursor-pointer transition-all duration-500"
+                  >
                     {/* Glowing effect inside */}
                     <div className="absolute inset-0 bg-gradient-to-tr from-electric-blue/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
                     
@@ -87,7 +92,8 @@ export default function Projects() {
                       src={project.image}
                       alt={project.title}
                       fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-700 brightness-[0.9] group-hover:brightness-100"
+                      loading="lazy"
+                      className="object-cover group-hover:scale-105 transition-transform duration-700 brightness-[0.85] group-hover:brightness-100"
                       sizes="(max-width: 1024px) 100vw, 700px"
                     />
                     
@@ -97,7 +103,7 @@ export default function Projects() {
                         <ExternalLink size={20} />
                       </div>
                     </div>
-                  </div>
+                  </a>
                 </motion.div>
 
                 {/* Project Info Block */}
@@ -137,17 +143,15 @@ export default function Projects() {
 
                   {/* Action buttons */}
                   <div className="flex items-center space-x-6">
-                    {project.liveLink && project.liveLink !== "#" && (
-                      <a
-                        href={project.liveLink}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="inline-flex items-center space-x-2 text-sm font-space font-bold tracking-wider text-white hover:text-electric-blue transition-colors duration-300"
-                      >
-                        <span>Visit Project</span>
-                        <ArrowRight size={16} />
-                      </a>
-                    )}
+                    <a
+                      href={project.liveLink}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center space-x-2 text-sm font-space font-bold tracking-wider text-white hover:text-electric-blue transition-colors duration-300"
+                    >
+                      <span>Live Demo</span>
+                      <ArrowRight size={16} />
+                    </a>
                     <a
                       href={project.githubLink}
                       target="_blank"
@@ -155,7 +159,7 @@ export default function Projects() {
                       className="inline-flex items-center space-x-2 text-sm font-space font-bold tracking-wider text-text-muted hover:text-white transition-colors duration-300"
                     >
                       <GithubIcon size={16} />
-                      <span>Code Repository</span>
+                      <span>GitHub</span>
                     </a>
                   </div>
                 </motion.div>

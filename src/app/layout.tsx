@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/developer_portrait.jpg",
+        url: "/images/profile.png",
         width: 800,
         height: 1000,
         alt: "Athira K Portrait",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Athira K",
     description: "Building Digital Experiences.",
-    images: ["/images/developer_portrait.jpg"],
+    images: ["/images/profile.png"],
   },
   robots: {
     index: true,

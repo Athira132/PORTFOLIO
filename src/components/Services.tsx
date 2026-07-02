@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Code, Layout, Sparkles, Search } from "lucide-react";
+import { Code, Layout, Sparkles, Search, Megaphone, Palette, Video, Monitor } from "lucide-react";
 
 export default function Services() {
   const services = [
@@ -20,15 +20,39 @@ export default function Services() {
     },
     {
       icon: <Sparkles size={24} />,
-      title: "Landing Pages & Portfolios",
+      title: "Landing Pages",
       description: "High-impact portfolio websites, conversion-focused landing pages, and minimal business websites designed to build your unique digital presence.",
       features: ["Personal Portfolio Sites", "High-Converting Landers", "Modern Business Interfaces"],
     },
     {
       icon: <Search size={24} />,
-      title: "SEO & Digital Branding",
+      title: "SEO & Branding",
       description: "Rigorous technical search engine optimization and digital identity design to improve ranking, speed scores, and organic brand visibility.",
       features: ["Technical SEO Optimization", "Core Web Vitals Audit", "Consistent Brand Guidelines"],
+    },
+    {
+      icon: <Megaphone size={24} />,
+      title: "Digital Marketing",
+      description: "Comprehensive marketing strategies, paid campaigns, conversion rate audits, and analytics dashboards to track user engagement.",
+      features: ["Paid Campaign Strategy", "Conversion Rate Audits", "Detailed Analytics Tracking"],
+    },
+    {
+      icon: <Palette size={24} />,
+      title: "Graphic Design",
+      description: "Premium visual assets, custom logo designs, pitch decks, and digital illustrations crafted to represent your unique brand value.",
+      features: ["Custom Brand Identity", "Vector Logo Designs", "Premium Pitch Decks"],
+    },
+    {
+      icon: <Video size={24} />,
+      title: "Video Editing",
+      description: "Dynamic video editing, motion graphics, promo videos, and social media media reels to engage your target audience.",
+      features: ["Social Reels & Promos", "Dynamic Motion Graphics", "Audio Engineering & Sync"],
+    },
+    {
+      icon: <Monitor size={24} />,
+      title: "Responsive Websites",
+      description: "Pixel-perfect mobile-first designs optimized for all screens, standard cross-browser support, and high performance.",
+      features: ["Mobile-First Development", "Cross-Browser Testing", "Core Web Vitals Checked"],
     },
   ];
 
@@ -51,8 +75,8 @@ export default function Services() {
           </p>
         </div>
 
-        {/* Grid of service cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Grid of service cards - 4 per row on desktop */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, idx) => (
             <motion.div
               key={service.title}
@@ -60,7 +84,7 @@ export default function Services() {
               initial={{ opacity: 0, y: 30 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1, duration: 0.6 }}
-              className="glass-panel glass-panel-hover p-8 rounded-2xl flex flex-col h-full relative group overflow-hidden"
+              className="glass-panel glass-panel-hover p-8 rounded-2xl flex flex-col h-full relative group overflow-hidden border border-white/5 hover:border-electric-blue/30 hover:shadow-lg hover:shadow-electric-blue/5 transition-all duration-500"
             >
               {/* Subtle background glow on card hover */}
               <div className="absolute -right-16 -top-16 w-32 h-32 rounded-full bg-electric-blue/5 blur-3xl group-hover:bg-electric-blue/15 transition-colors duration-500" />

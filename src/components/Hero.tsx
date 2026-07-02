@@ -110,13 +110,15 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.9, y: 30 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] as any }}
-            className="relative w-[280px] h-[360px] md:w-[320px] md:h-[420px] rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-black/80 animate-float"
+            className="relative w-[280px] h-[360px] md:w-[320px] md:h-[420px] rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-electric-blue/10 animate-float"
           >
+            {/* Subtle blue rim light */}
+            <div className="absolute inset-0 bg-gradient-to-tr from-electric-blue/15 to-transparent pointer-events-none z-10 opacity-70" />
             <Image
-              src="/images/developer_portrait.jpg"
+              src="/images/profile.png"
               alt="Athira Developer Portrait"
               fill
-              className="object-cover brightness-[0.85] contrast-[1.1] scale-105 hover:scale-100 transition-transform duration-700"
+              className="object-cover brightness-[0.9] scale-105 hover:scale-100 transition-transform duration-700"
               sizes="(max-width: 768px) 280px, 320px"
               priority
             />
@@ -134,8 +136,8 @@ export default function Hero() {
             className="absolute top-10 right-0 md:-right-8 w-44 h-32 rounded-xl overflow-hidden border border-white/10 shadow-xl bg-black/60 backdrop-blur-sm animate-float-delayed"
           >
             <Image
-              src="/images/laptop_mockup.jpg"
-              alt="Dashboard Preview"
+              src="/images/kitab.png"
+              alt="Kitab Preview"
               fill
               className="object-cover"
               sizes="176px"
@@ -150,8 +152,8 @@ export default function Hero() {
             className="absolute bottom-8 left-0 md:-left-8 w-24 h-44 rounded-xl overflow-hidden border border-white/10 shadow-xl bg-black/60 backdrop-blur-sm animate-float"
           >
             <Image
-              src="/images/mobile_mockup.jpg"
-              alt="App Mockup"
+              src="/images/cafe.jpg"
+              alt="Cafe Preview"
               fill
               className="object-cover"
               sizes="96px"
