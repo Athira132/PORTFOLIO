@@ -15,34 +15,45 @@ const sora = Sora({
 });
 
 export const metadata: Metadata = {
-  title: "Athira K | Full Stack Web Developer Portfolio",
-  description: "Athira K (aathi.dev) is an aspiring Full Stack Web Developer and UI Designer based in Palakkad, Kerala, India. Integrated MSc Computer Science graduate from Pondicherry Central University.",
+  metadataBase: new URL("https://aathi.dev"),
+  title: "Athira K | Full Stack Web Developer",
+  description: "Portfolio of Athira K, Full Stack Web Developer specializing in React, Node.js, MERN Stack, UI Design, and Digital Experiences.",
   keywords: [
+    "Athira",
     "Athira K",
     "aathi.dev",
-    "Full-Stack Web Developer",
-    "UI Designer",
-    "Integrated MSc Computer Science",
-    "Pondicherry Central University",
-    "Kitab Bookshop",
-    "Cafe Management System",
-    "Palakkad",
-    "Kerala",
-    "India"
+    "Full Stack Developer",
+    "React Developer",
+    "MERN Developer",
+    "Web Developer",
+    "Portfolio",
+    "Node.js",
+    "Frontend Developer",
+    "Backend Developer",
+    "Digital Creator"
   ],
   authors: [{ name: "Athira K", url: "https://aathi.dev" }],
   openGraph: {
-    title: "Athira K | Full Stack Web Developer Portfolio",
-    description: "Athira K is an Integrated MSc Computer Science graduate and Full Stack Developer building responsive websites and digital experiences.",
+    title: "Athira K",
+    description: "Building Digital Experiences.",
     url: "https://aathi.dev",
     siteName: "aathi.dev",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/images/developer_portrait.jpg",
+        width: 800,
+        height: 1000,
+        alt: "Athira K Portrait",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Athira K | Full Stack Web Developer Portfolio",
-    description: "Athira K is an Integrated MSc Computer Science graduate and Full Stack Developer building responsive websites and digital experiences.",
+    title: "Athira K",
+    description: "Building Digital Experiences.",
+    images: ["/images/developer_portrait.jpg"],
   },
   robots: {
     index: true,
