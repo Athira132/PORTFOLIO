@@ -65,7 +65,7 @@ export default function Footer() {
         {/* Left Side: Brand and copyright */}
         <div className="flex flex-col items-center md:items-start space-y-2">
           <div className="flex items-center space-x-2">
-            <div className="w-6 h-6 rounded-md border border-white/20 bg-transparent flex items-center justify-center overflow-hidden relative">
+            <div className="w-6 h-6 flex items-center justify-center overflow-hidden relative">
               <Image
                 src="/images/logo.png"
                 alt="aathi.dev logo"

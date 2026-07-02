@@ -41,7 +41,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
         {/* Logo */}
         <a href="#home" className="flex items-center space-x-3 group">
-          <div className="w-10 h-10 rounded-xl border border-white/20 bg-transparent flex items-center justify-center overflow-hidden group-hover:border-electric-blue/60 group-hover:scale-105 transition-all duration-300 relative">
+          <div className="w-10 h-10 flex items-center justify-center overflow-hidden group-hover:scale-105 transition-transform duration-300 relative">
             <Image
               src="/images/logo.png"
               alt="aathi.dev logo"
