@@ -18,6 +18,10 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://aathi.dev"),
   title: "Athira K | Full Stack Web Developer",
   description: "Portfolio of Athira K, Full Stack Web Developer specializing in React, Node.js, MERN Stack, UI Design, and Digital Experiences.",
+  icons: {
+    icon: "/images/logo.png",
+    apple: "/images/logo.png",
+  },
   keywords: [
     "Athira",
     "Athira K",
@@ -42,7 +46,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/profile.png",
+        url: "/images/profile-new.png",
         width: 800,
         height: 1000,
         alt: "Athira K Portrait",
@@ -53,7 +57,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Athira K",
     description: "Building Digital Experiences.",
-    images: ["/images/profile.png"],
+    images: ["/images/profile-new.png"],
   },
   robots: {
     index: true,

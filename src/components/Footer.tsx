@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ArrowUp } from "lucide-react";
 
 const GithubIcon = ({ size = 20, className = "" }) => (
@@ -64,8 +65,14 @@ export default function Footer() {
         {/* Left Side: Brand and copyright */}
         <div className="flex flex-col items-center md:items-start space-y-2">
           <div className="flex items-center space-x-2">
-            <div className="w-6 h-6 rounded-md border border-white/20 bg-transparent flex items-center justify-center font-bold text-xs text-white">
-              AD
+            <div className="w-6 h-6 rounded-md border border-white/20 bg-transparent flex items-center justify-center overflow-hidden relative">
+              <Image
+                src="/images/logo.png"
+                alt="aathi.dev logo"
+                width={24}
+                height={24}
+                className="object-contain p-0.5"
+              />
             </div>
             <span className="font-space font-bold tracking-widest text-sm text-white">
               aathi.dev

@@ -115,7 +115,7 @@ export default function Hero() {
             {/* Subtle blue rim light */}
             <div className="absolute inset-0 bg-gradient-to-tr from-electric-blue/15 to-transparent pointer-events-none z-10 opacity-70" />
             <Image
-              src="/images/profile.png"
+              src="/images/profile-new.png"
               alt="Athira Developer Portrait"
               fill
               className="object-cover brightness-[0.9] scale-105 hover:scale-100 transition-transform duration-700"
