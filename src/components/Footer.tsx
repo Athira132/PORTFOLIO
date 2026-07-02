@@ -71,7 +71,7 @@ export default function Footer() {
                 alt="aathi.dev logo"
                 width={24}
                 height={24}
-                className="object-contain p-0.5"
+                className="object-contain scale-[2.2]"
               />
             </div>
             <span className="font-space font-bold tracking-widest text-sm text-white">
