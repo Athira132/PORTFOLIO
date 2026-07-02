@@ -2,58 +2,60 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Briefcase } from "lucide-react";
 
 export default function Experience() {
-  const experiences = [
+  const education = [
     {
-      role: "Lead Full-Stack Developer",
-      company: "Digital Horizon Studio",
-      period: "2024 - Present",
-      description: "Directing the engineering team to deploy fast, scalable web software using Next.js, Node.js, and GCP. Standardized design-system component workflows that slashed UI revisions by 40%.",
+      role: "Integrated MSc in Computer Science",
+      company: "Pondicherry Central University",
+      period: "2021 - 2026",
+      description: "Completed a comprehensive 5-year integrated program covering Advanced Data Structures, Database Systems, Web Technologies, Object-Oriented Programming, and Software Engineering methodologies.",
     },
     {
-      role: "Freelance Developer & Brand Designer",
-      company: "aathi.dev Studio",
-      period: "2022 - 2024",
-      description: "Delivered responsive web interfaces, branding guidelines, and conversion-optimized landing pages for over 15 startups globally. Maintained direct client communications and project scoping.",
+      role: "Higher Secondary Education (Science)",
+      company: "Kerala State Board",
+      period: "2019 - 2021",
+      description: "Specialized in Computer Science, Mathematics, Physics, and Chemistry.",
     },
     {
-      role: "UI Designer & Frontend Intern",
-      company: "Vivid Interactive",
-      period: "2021 - 2022",
-      description: "Scaffolded mockups and wireframes in Figma. Coordinated with backend engineers to build interactive React components, improving layout load speeds and accessibility scores.",
-    },
-    {
-      role: "Digital Creator & Video Editor",
-      company: "Self-Employed",
-      period: "2020 - 2021",
-      description: "Designed marketing banners, produced product promo videos with Premiere and After Effects, and managed SEO optimization tasks for local businesses.",
+      role: "Secondary Education",
+      company: "Kerala State Board",
+      period: "2019",
+      description: "Foundational secondary education with a focus on Mathematics, Science, and languages.",
     },
   ];
 
   return (
-    <section className="py-24 px-6 md:px-12 bg-transparent relative z-10">
+    <section id="experience" className="py-24 px-6 md:px-12 bg-transparent relative z-10">
       <div className="max-w-4xl mx-auto">
         
         {/* Editorial Heading */}
         <div className="mb-16 md:mb-24 flex flex-col md:flex-row md:items-end justify-between border-b border-white/5 pb-8">
           <div>
             <span className="text-xs uppercase tracking-widest text-electric-blue font-bold font-space block mb-2">
-              Career Path
+              Education & Path
             </span>
             <h2 className="font-space font-extrabold text-4xl md:text-6xl tracking-tight text-white">
-              EXPERIENCE
+              CAREER JOURNEY
             </h2>
           </div>
           <p className="text-text-muted max-w-xs mt-4 md:mt-0 font-sora font-light text-xs md:text-sm">
-            Professional trajectory in full-stack development, design systems, and digital marketing.
+            Academic timeline and current technical trajectory.
+          </p>
+        </div>
+
+        {/* Career Journey Statement */}
+        <div className="mb-16 glass-panel p-8 rounded-2xl border border-white/5 relative overflow-hidden group">
+          <div className="absolute inset-0 bg-gradient-to-tr from-electric-blue/[0.02] to-transparent pointer-events-none" />
+          <h3 className="font-space font-bold text-lg text-white mb-3">Objective & Summary</h3>
+          <p className="text-text-muted font-light text-sm leading-relaxed">
+            Recently graduated Full Stack Web Developer actively seeking opportunities to contribute, learn, and build impactful digital products. Highly experienced through academic coursework and advanced personal projects (such as Kitab Bookshop Management System), with strong practical knowledge of modern web technologies.
           </p>
         </div>
 
         {/* Timeline Component */}
         <div className="relative border-l border-white/10 pl-6 md:pl-10 space-y-12">
-          {experiences.map((exp, idx) => (
+          {education.map((exp, idx) => (
             <motion.div
               key={exp.role}
               whileInView={{ opacity: 1, x: 0 }}

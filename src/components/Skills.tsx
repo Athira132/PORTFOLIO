@@ -5,24 +5,32 @@ import { motion } from "framer-motion";
 
 export default function Skills() {
   const skillsList = [
-    { name: "HTML", category: "Core", color: "rgba(227, 79, 38, 0.15)", iconColor: "#E34F26" },
-    { name: "CSS", category: "Core", color: "rgba(21, 114, 182, 0.15)", iconColor: "#1572B6" },
-    { name: "JavaScript", category: "Core", color: "rgba(247, 223, 30, 0.15)", iconColor: "#F7DF1E" },
+    // Frontend
     { name: "React", category: "Frontend", color: "rgba(97, 218, 251, 0.15)", iconColor: "#61DAFB" },
+    { name: "JavaScript", category: "Frontend", color: "rgba(247, 223, 30, 0.15)", iconColor: "#F7DF1E" },
+    { name: "HTML5", category: "Frontend", color: "rgba(227, 79, 38, 0.15)", iconColor: "#E34F26" },
+    { name: "CSS3", category: "Frontend", color: "rgba(21, 114, 182, 0.15)", iconColor: "#1572B6" },
+    { name: "Responsive Design", category: "Frontend", color: "rgba(0, 242, 254, 0.15)", iconColor: "#00F2FE" },
+    
+    // Backend
     { name: "Node.js", category: "Backend", color: "rgba(51, 153, 51, 0.15)", iconColor: "#339933" },
+    { name: "Express.js", category: "Backend", color: "rgba(128, 128, 128, 0.15)", iconColor: "#808080" },
     { name: "Python", category: "Backend", color: "rgba(55, 118, 171, 0.15)", iconColor: "#3776AB" },
-    { name: "MySQL", category: "Backend", color: "rgba(68, 121, 161, 0.15)", iconColor: "#4479A1" },
+    { name: "C++", category: "Backend", color: "rgba(0, 89, 156, 0.15)", iconColor: "#00599C" },
+    
+    // Database
+    { name: "MongoDB", category: "Database", color: "rgba(71, 162, 72, 0.15)", iconColor: "#47A248" },
+    { name: "MySQL", category: "Database", color: "rgba(68, 121, 161, 0.15)", iconColor: "#4479A1" },
+    { name: "SQL", category: "Database", color: "rgba(0, 115, 190, 0.15)", iconColor: "#0073BE" },
+    
+    // Tools
     { name: "Git", category: "Tools", color: "rgba(240, 80, 50, 0.15)", iconColor: "#F05032" },
-    { name: "Figma", category: "Design", color: "rgba(242, 78, 29, 0.15)", iconColor: "#F24E1D" },
-    { name: "Photoshop", category: "Design", color: "rgba(49, 197, 244, 0.15)", iconColor: "#31A8FF" },
-    { name: "Illustrator", category: "Design", color: "rgba(255, 154, 0, 0.15)", iconColor: "#FF9A00" },
-    { name: "Premiere Pro", category: "Design", color: "rgba(153, 153, 255, 0.15)", iconColor: "#9999FF" },
-    { name: "After Effects", category: "Design", color: "rgba(210, 145, 240, 0.15)", iconColor: "#D291F0" },
-    { name: "WordPress", category: "Core", color: "rgba(33, 117, 155, 0.15)", iconColor: "#21759B" },
+    { name: "GitHub", category: "Tools", color: "rgba(255, 255, 255, 0.15)", iconColor: "#FFFFFF" },
+    { name: "VS Code", category: "Tools", color: "rgba(0, 122, 204, 0.15)", iconColor: "#007ACC" },
   ];
 
   // Group by category to build an organized layout
-  const categories = ["Core", "Frontend", "Backend", "Design", "Tools"];
+  const categories = ["Frontend", "Backend", "Database", "Tools"];
 
   const containerVariants = {
     hidden: {},
@@ -43,7 +51,7 @@ export default function Skills() {
   };
 
   return (
-    <section className="py-24 px-6 md:px-12 bg-transparent relative z-10">
+    <section id="skills" className="py-24 px-6 md:px-12 bg-transparent relative z-10">
       <div className="max-w-7xl mx-auto">
         
         {/* Editorial Heading */}

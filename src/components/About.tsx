@@ -7,10 +7,10 @@ import { Terminal, ShieldCheck, Zap, Sparkles } from "lucide-react";
 
 export default function About() {
   const stats = [
-    { number: "20+", label: "Projects Completed" },
-    { number: "15+", label: "Happy Clients" },
-    { number: "10+", label: "Technologies" },
-    { number: "3+", label: "Years Learning" },
+    { number: "2+", label: "Projects Completed" },
+    { number: "12+", label: "Technologies" },
+    { number: "2+", label: "Certifications" },
+    { number: "5+", label: "Years of Learning" },
   ];
 
   const coreFocus = [
@@ -66,7 +66,7 @@ export default function About() {
                 {/* Floating Card Overlay inside */}
                 <div className="absolute bottom-4 left-4 right-4 glass-panel p-3 rounded-lg border border-white/10 flex items-center space-x-2 text-xs">
                   <ShieldCheck className="text-electric-blue flex-shrink-0" size={16} />
-                  <span className="font-mono text-white text-[11px]">Athira | Creative Thinker</span>
+                  <span className="font-mono text-white text-[11px]">Athira K | Creative Technologist</span>
                 </div>
               </div>
             </motion.div>
@@ -78,9 +78,17 @@ export default function About() {
               Designing and developing modern brands and digital experiences.
             </h3>
             
-            <p className="text-text-muted font-light text-sm md:text-base leading-relaxed mb-8">
-              With a background in both technical engineering and visual styling, I build scalable web systems that don&apos;t just run fast—they look premium and engage users. By keeping design and development unified, I deliver cohesive, state-of-the-art products.
+            <p className="text-text-muted font-light text-sm md:text-base leading-relaxed mb-6">
+              Recently graduated with an <span className="text-white font-medium">Integrated MSc in Computer Science</span> from <span className="text-white font-medium">Pondicherry Central University</span> (2021–2026), I have developed a strong practical foundation in modern web technologies through rigorous academic courses and hands-on projects.
             </p>
+            
+            <p className="text-text-muted font-light text-sm md:text-base leading-relaxed mb-8">
+              I am passionate about full-stack web development, user experience design, and digital branding. I actively seek complex challenges where I can write clean code, design modern workflows, and learn new technical skillsets.
+            </p>
+
+            <div className="border-l-2 border-electric-blue pl-4 py-1 mb-8 italic text-white/90 text-sm md:text-base">
+              &ldquo;I believe great digital experiences are built where clean code meets thoughtful design.&rdquo;
+            </div>
 
             {/* Core Pillars List */}
             <div className="space-y-6 mb-10">

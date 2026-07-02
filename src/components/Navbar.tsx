@@ -23,8 +23,10 @@ export default function Navbar() {
   const navLinks = [
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
-    { name: "Services", href: "#services" },
     { name: "Projects", href: "#projects" },
+    { name: "Skills", href: "#skills" },
+    { name: "Services", href: "#services" },
+    { name: "Experience", href: "#experience" },
     { name: "Contact", href: "#contact" },
   ];
 
@@ -39,7 +41,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
         {/* Logo */}
         <a href="#home" className="flex items-center space-x-3 group">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-electric-blue to-purple-glow flex items-center justify-center font-bold text-lg text-white border border-white/10 group-hover:scale-105 transition-transform duration-300">
+          <div className="w-10 h-10 rounded-xl border border-white/20 bg-transparent flex items-center justify-center font-bold text-lg text-white group-hover:border-electric-blue/60 group-hover:scale-105 transition-all duration-300">
             AD
           </div>
           <span className="font-space font-bold text-xl tracking-wider text-white group-hover:text-electric-blue transition-colors duration-300">

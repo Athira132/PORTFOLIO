@@ -2,45 +2,33 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Code, Layout, TrendingUp, Paintbrush, Video, Search } from "lucide-react";
+import { Code, Layout, Sparkles, Search } from "lucide-react";
 
 export default function Services() {
   const services = [
     {
       icon: <Code size={24} />,
       title: "Web Development",
-      description: "Custom responsive websites and complex react web applications built with Next.js, TypeScript, and modern styling solutions. Optimised for performance and scalability.",
-      features: ["React / Next.js Development", "Headless CMS Integrations", "Database & API Design"],
+      description: "Custom responsive website development and complex full-stack MERN applications built with React, Node.js, Express, and MongoDB. Optimized for performance and scalability.",
+      features: ["MERN Stack Applications", "React & Next.js Frontend", "Scalable Database Layers"],
     },
     {
       icon: <Layout size={24} />,
       title: "UI/UX Design",
-      description: "Editorial-style layouts, clean design systems, and wireframes that create premium digital experiences. Built with Figma to map ideal client/user flows.",
-      features: ["Interactive Mockups", "Responsive layouts", "Design System Creation"],
+      description: "Clean design systems, interactive prototypes, and modern interface designs. Focused on crafting intuitive user paths and responsive grids using Figma.",
+      features: ["User Experience Mapping", "Responsive UI Wireframing", "Figma Interactive Design"],
     },
     {
-      icon: <TrendingUp size={24} />,
-      title: "Digital Marketing",
-      description: "Tailored outreach and optimization campaigns to elevate your product's audience. We focus on conversion rates and target segmentation.",
-      features: ["Conversion Rate Optimization", "Audience Analysis", "Brand Positioning"],
-    },
-    {
-      icon: <Paintbrush size={24} />,
-      title: "Graphic Design",
-      description: "Branding materials, typographic assets, logo concepts, and magazine-style visual architectures that communicate high value instantly.",
-      features: ["Brand Identity", "Minimalist Logo Design", "Marketing Assets"],
-    },
-    {
-      icon: <Video size={24} />,
-      title: "Video Editing",
-      description: "High-end content editing and motion graphics to tell your product's story visually. Tailored for promotions, product launches, or tutorials.",
-      features: ["Premiere & After Effects", "Color Grading & Audio", "Motion Title Design"],
+      icon: <Sparkles size={24} />,
+      title: "Landing Pages & Portfolios",
+      description: "High-impact portfolio websites, conversion-focused landing pages, and minimal business websites designed to build your unique digital presence.",
+      features: ["Personal Portfolio Sites", "High-Converting Landers", "Modern Business Interfaces"],
     },
     {
       icon: <Search size={24} />,
-      title: "SEO",
-      description: "Rigorous technical search engine optimization to make sure your website ranks on top. Fast load speeds, semantic HTML structure, and schema tags.",
-      features: ["Technical Audit", "Speed Optimization", "Core Web Vitals Boost"],
+      title: "SEO & Digital Branding",
+      description: "Rigorous technical search engine optimization and digital identity design to improve ranking, speed scores, and organic brand visibility.",
+      features: ["Technical SEO Optimization", "Core Web Vitals Audit", "Consistent Brand Guidelines"],
     },
   ];
 

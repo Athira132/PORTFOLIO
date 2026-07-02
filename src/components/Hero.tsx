@@ -46,7 +46,7 @@ export default function Hero() {
             className="inline-flex items-center space-x-2 px-3 py-1 rounded-full border border-electric-blue/20 bg-electric-blue/5 text-electric-blue text-xs font-semibold uppercase tracking-wider mb-6 self-start"
           >
             <span className="w-1.5 h-1.5 rounded-full bg-electric-blue animate-pulse" />
-            <span>Athira Portfolio</span>
+            <span>aathi.dev</span>
           </motion.div>
 
           {/* Huge Editorial Headings */}
@@ -67,7 +67,7 @@ export default function Hero() {
             variants={itemVariants}
             className="text-base md:text-lg text-text-muted max-w-xl mb-10 leading-relaxed font-sora font-light"
           >
-            Hi, I&apos;m <span className="text-white font-medium">Athira</span>. I design and develop modern websites, web applications, brands, and digital experiences that help businesses scale.
+            Hi, I&apos;m <span className="text-white font-medium">Athira K</span>. I&apos;m a Full Stack Web Developer passionate about building responsive websites, scalable web applications, and digital experiences that combine creativity with modern technology.
           </motion.p>
 
           {/* Call to Actions */}
@@ -77,16 +77,24 @@ export default function Hero() {
           >
             <a
               href="#projects"
-              className="group px-8 py-4 rounded-full bg-electric-blue text-white hover:bg-electric-blue-dark font-space font-bold tracking-wide transition-all duration-300 flex items-center space-x-2 shadow-lg shadow-electric-blue/25 hover:shadow-electric-blue/40 hover:scale-[1.02]"
+              className="group px-6 py-3.5 rounded-full bg-electric-blue text-white hover:bg-electric-blue-dark font-space font-bold tracking-wide transition-all duration-300 flex items-center space-x-2 shadow-lg shadow-electric-blue/25 hover:shadow-electric-blue/40 hover:scale-[1.02]"
             >
-              <span>View Work</span>
+              <span>View Projects</span>
               <ArrowUpRight size={18} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
             </a>
             <a
-              href="#contact"
-              className="px-8 py-4 rounded-full border border-white/10 hover:border-white/20 bg-white/5 hover:bg-white/10 text-white font-space font-bold tracking-wide transition-all duration-300 hover:scale-[1.02]"
+              href="#"
+              target="_blank"
+              rel="noreferrer"
+              className="px-6 py-3.5 rounded-full border border-white/10 hover:border-white/20 bg-white/5 hover:bg-white/10 text-white font-space font-bold tracking-wide transition-all duration-300 hover:scale-[1.02]"
             >
-              Let&apos;s Talk
+              Download Resume
+            </a>
+            <a
+              href="#contact"
+              className="px-6 py-3.5 rounded-full border border-electric-blue/40 hover:border-electric-blue text-electric-blue hover:text-white hover:bg-electric-blue/10 font-space font-bold tracking-wide transition-all duration-300 hover:scale-[1.02]"
+            >
+              Hire Me
             </a>
           </motion.div>
         </motion.div>
@@ -161,7 +169,7 @@ export default function Hero() {
             <Terminal className="text-electric-blue animate-pulse" size={16} />
             <div className="font-mono text-left text-[10px]">
               <span className="text-electric-blue">const</span> dev = <span className="text-purple-glow">{`{`}</span> <br />
-              &nbsp;&nbsp;name: <span className="text-soft-cyan">&apos;Athira&apos;</span>, <br />
+              &nbsp;&nbsp;name: <span className="text-soft-cyan">&apos;Athira K&apos;</span>, <br />
               &nbsp;&nbsp;role: <span className="text-soft-cyan">&apos;Full Stack&apos;</span> <br />
               <span className="text-purple-glow">{`}`}</span>;
             </div>

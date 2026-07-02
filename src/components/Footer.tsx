@@ -64,7 +64,7 @@ export default function Footer() {
         {/* Left Side: Brand and copyright */}
         <div className="flex flex-col items-center md:items-start space-y-2">
           <div className="flex items-center space-x-2">
-            <div className="w-6 h-6 rounded-md bg-gradient-to-tr from-electric-blue to-purple-glow flex items-center justify-center font-bold text-xs text-white">
+            <div className="w-6 h-6 rounded-md border border-white/20 bg-transparent flex items-center justify-center font-bold text-xs text-white">
               AD
             </div>
             <span className="font-space font-bold tracking-widest text-sm text-white">
@@ -79,14 +79,14 @@ export default function Footer() {
         {/* Center: Credits */}
         <div className="text-center md:text-left">
           <p className="text-xs text-text-muted font-space">
-            Designed & Developed by <span className="text-white hover:text-electric-blue transition-colors duration-300">Athira</span>
+            Designed & Developed by <span className="text-white hover:text-electric-blue transition-colors duration-300">Athira K</span>
           </p>
         </div>
 
         {/* Right Side: Social icons and Top arrow */}
         <div className="flex items-center space-x-6">
           <a
-            href="https://github.com"
+            href="https://github.com/Athira132"
             target="_blank"
             rel="noreferrer"
             className="text-text-muted hover:text-white transition-colors duration-300"
@@ -95,7 +95,7 @@ export default function Footer() {
             <GithubIcon size={18} />
           </a>
           <a
-            href="https://linkedin.com"
+            href="#"
             target="_blank"
             rel="noreferrer"
             className="text-text-muted hover:text-white transition-colors duration-300"

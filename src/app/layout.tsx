@@ -15,23 +15,25 @@ const sora = Sora({
 });
 
 export const metadata: Metadata = {
-  title: "aathi.dev | Building Digital Experiences",
-  description: "Athira (aathi.dev) is a premium full-stack developer and digital creator building interactive, futuristic, and high-performance digital experiences.",
+  title: "Athira K | Full Stack Web Developer Portfolio",
+  description: "Athira K (aathi.dev) is an aspiring Full Stack Web Developer and UI Designer based in Palakkad, Kerala, India. Integrated MSc Computer Science graduate from Pondicherry Central University.",
   keywords: [
-    "Athira",
+    "Athira K",
     "aathi.dev",
-    "Full-Stack Developer",
+    "Full-Stack Web Developer",
     "UI Designer",
-    "Digital Agency",
-    "Vercel",
-    "Next.js Portfolio",
-    "Editorial Web Design",
-    "Creative Developer Portfolio"
+    "Integrated MSc Computer Science",
+    "Pondicherry Central University",
+    "Kitab Bookshop",
+    "Cafe Management System",
+    "Palakkad",
+    "Kerala",
+    "India"
   ],
-  authors: [{ name: "Athira", url: "https://aathi.dev" }],
+  authors: [{ name: "Athira K", url: "https://aathi.dev" }],
   openGraph: {
-    title: "aathi.dev | Building Digital Experiences",
-    description: "Athira is a premium full-stack developer and digital creator building high-end, futuristic web applications.",
+    title: "Athira K | Full Stack Web Developer Portfolio",
+    description: "Athira K is an Integrated MSc Computer Science graduate and Full Stack Developer building responsive websites and digital experiences.",
     url: "https://aathi.dev",
     siteName: "aathi.dev",
     locale: "en_US",
@@ -39,8 +41,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "aathi.dev | Building Digital Experiences",
-    description: "Athira is a premium full-stack developer and digital creator building high-end, futuristic web applications.",
+    title: "Athira K | Full Stack Web Developer Portfolio",
+    description: "Athira K is an Integrated MSc Computer Science graduate and Full Stack Developer building responsive websites and digital experiences.",
   },
   robots: {
     index: true,

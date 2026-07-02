@@ -26,28 +26,20 @@ const GithubIcon = ({ size = 20, className = "" }) => (
 export default function Projects() {
   const projects = [
     {
-      title: "Apex Dashboard",
-      description: "A premium SaaS analytics dashboard that monitors real-time system performance, query latency, and pipeline load statistics with interactive charts and low-latency metrics.",
-      technologies: ["React", "Next.js", "Tailwind CSS", "Recharts", "TypeScript"],
+      title: "Kitab — Bookshop Management",
+      description: "A complete MERN-stack Bookshop Management System featuring a customer storefront, authenticated admin dashboard, inventory management, bulk CSV catalog import, secure ordering, and staff billing workflow.",
+      technologies: ["React", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
       image: "/images/laptop_mockup.jpg",
-      liveLink: "https://apex.aathi.dev",
-      githubLink: "https://github.com",
+      liveLink: "https://kitab-bookshop.vercel.app/",
+      githubLink: "https://github.com/Athira132",
     },
     {
-      title: "VibeChat Mobile",
-      description: "An end-to-end encrypted messaging mobile app mockup. Clean dark user interfaces, soft gradients, instant message delivery states, and interactive user channels.",
-      technologies: ["React Native", "Node.js", "Socket.io", "MongoDB", "Framer Motion"],
-      image: "/images/mobile_mockup.jpg",
-      liveLink: "https://vibechat.aathi.dev",
-      githubLink: "https://github.com",
-    },
-    {
-      title: "Aura Creative Agency",
-      description: "An editorial portfolio showcase for digital creators and photographers. Emphasizes huge typography, high-contrast imagery, responsive grid lines, and smooth page transitions.",
-      technologies: ["Next.js", "GSAP", "TypeScript", "Tailwind CSS"],
+      title: "Cafe Management System",
+      description: "A multi-role cafe management system with custom dashboards for Owners, Staff, and Customers. Includes secure JWT token authentication, granular Role-Based Access Control, live order tracking, menu editors, and revenue analytics.",
+      technologies: ["Node.js", "Express", "JavaScript", "HTML5", "CSS3"],
       image: "/images/project_preview_3.jpg",
-      liveLink: "https://aura.aathi.dev",
-      githubLink: "https://github.com",
+      liveLink: "#",
+      githubLink: "https://github.com/Athira132",
     },
   ];
 
@@ -145,15 +137,17 @@ export default function Projects() {
 
                   {/* Action buttons */}
                   <div className="flex items-center space-x-6">
-                    <a
-                      href={project.liveLink}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="inline-flex items-center space-x-2 text-sm font-space font-bold tracking-wider text-white hover:text-electric-blue transition-colors duration-300"
-                    >
-                      <span>Visit Project</span>
-                      <ArrowRight size={16} />
-                    </a>
+                    {project.liveLink && project.liveLink !== "#" && (
+                      <a
+                        href={project.liveLink}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center space-x-2 text-sm font-space font-bold tracking-wider text-white hover:text-electric-blue transition-colors duration-300"
+                      >
+                        <span>Visit Project</span>
+                        <ArrowRight size={16} />
+                      </a>
+                    )}
                     <a
                       href={project.githubLink}
                       target="_blank"

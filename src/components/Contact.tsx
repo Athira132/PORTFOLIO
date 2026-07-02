@@ -76,8 +76,8 @@ export default function Contact() {
   };
 
   const socialLinks = [
-    { name: "GitHub", href: "https://github.com", icon: <GithubIcon size={20} /> },
-    { name: "LinkedIn", href: "https://linkedin.com", icon: <LinkedinIcon size={20} /> },
+    { name: "GitHub", href: "https://github.com/Athira132", icon: <GithubIcon size={20} /> },
+    { name: "LinkedIn", href: "#", icon: <LinkedinIcon size={20} /> },
     { name: "Instagram", href: "https://instagram.com", icon: <InstagramIcon size={20} /> },
   ];
 
@@ -127,8 +127,8 @@ export default function Contact() {
                 </div>
                 <div>
                   <span className="text-[10px] text-text-muted font-mono uppercase tracking-wider block">Email</span>
-                  <a href="mailto:hello@aathi.dev" className="text-sm font-space text-white hover:text-electric-blue transition-colors">
-                    hello@aathi.dev
+                  <a href="mailto:athiraanuss12@gmail.com" className="text-sm font-space text-white hover:text-electric-blue transition-colors">
+                    athiraanuss12@gmail.com
                   </a>
                 </div>
               </div>
@@ -139,8 +139,8 @@ export default function Contact() {
                 </div>
                 <div>
                   <span className="text-[10px] text-text-muted font-mono uppercase tracking-wider block">Phone</span>
-                  <a href="tel:+1234567890" className="text-sm font-space text-white hover:text-electric-blue transition-colors">
-                    +1 (234) 567-890
+                  <a href="tel:+918606720360" className="text-sm font-space text-white hover:text-electric-blue transition-colors">
+                    +91 8606720360
                   </a>
                 </div>
               </div>
@@ -151,7 +151,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <span className="text-[10px] text-text-muted font-mono uppercase tracking-wider block">Location</span>
-                  <span className="text-sm font-space text-white">San Francisco, CA</span>
+                  <span className="text-sm font-space text-white">Palakkad, Kerala, India</span>
                 </div>
               </div>
             </div>
