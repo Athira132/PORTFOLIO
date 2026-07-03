@@ -1,33 +1,14 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Quote } from "lucide-react";
+import { testimonialsData } from "../data/testimonials";
 
 export default function Testimonials() {
-  const testimonials = [
-    {
-      name: "Sarah Jenkins",
-      role: "CEO, Apex Ventures",
-      quote: "Athira&apos;s unique combination of visual design sense and robust development capabilities was a game-changer for our SaaS dashboard. She understood the vision and delivered a premium product.",
-      avatarInitials: "SJ",
-    },
-    {
-      name: "Marcus Vance",
-      role: "Product Director, VibeChat",
-      quote: "The mobile UI work is absolutely stunning. Athira delivered clean, fully working React components, and her project management throughout the launch process was stellar.",
-      avatarInitials: "MV",
-    },
-    {
-      name: "Clara Croft",
-      role: "Founder, Aura Studios",
-      quote: "aathi.dev transformed our digital presence completely. The loading speed of the site, editorial layouts, and animations have already drawn rave reviews from our clients.",
-      avatarInitials: "CC",
-    },
-  ];
-
   return (
-    <section className="py-24 px-6 md:px-12 bg-transparent relative z-10">
+    <section id="testimonials" className="py-24 px-6 md:px-12 bg-transparent relative z-10">
       <div className="max-w-7xl mx-auto">
         
         {/* Editorial Heading */}
@@ -45,16 +26,16 @@ export default function Testimonials() {
           </p>
         </div>
 
-        {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {testimonials.map((test, idx) => (
+        {/* Centered 2-Card Testimonials Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          {testimonialsData.map((test, idx) => (
             <motion.div
               key={test.name}
               whileInView={{ opacity: 1, y: 0 }}
               initial={{ opacity: 0, y: 30 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.15, duration: 0.6 }}
-              className="glass-panel p-8 rounded-2xl flex flex-col relative group overflow-hidden"
+              className="glass-panel p-8 rounded-2xl flex flex-col relative group overflow-hidden border border-white/5 hover:border-electric-blue/20 transition-all duration-300"
             >
               {/* Quote icon watermark */}
               <div className="absolute right-6 top-6 text-white/5 group-hover:text-electric-blue/10 transition-colors duration-300">
@@ -68,16 +49,27 @@ export default function Testimonials() {
 
               {/* Author info */}
               <div className="flex items-center space-x-4 border-t border-white/5 pt-6">
-                {/* Visual Avatar with letters */}
-                <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-electric-blue to-purple-glow flex items-center justify-center font-bold text-xs text-white">
-                  {test.avatarInitials}
+                {/* Circular profile photo with hover scale and soft blue glow */}
+                <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-white/10 group-hover:border-electric-blue/40 shadow-[0_0_15px_rgba(47,128,255,0.05)] group-hover:shadow-[0_0_20px_rgba(47,128,255,0.15)] transition-all duration-300 flex-shrink-0">
+                  <Image
+                    src={test.image}
+                    alt={test.name}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
                 </div>
                 <div>
-                  <cite className="not-italic font-space font-bold text-sm text-white block">
-                    {test.name}
+                  <cite className="not-italic font-space font-bold text-sm text-white block hover:text-electric-blue transition-colors">
+                    {test.instagram ? (
+                      <a href={test.instagram} target="_blank" rel="noreferrer">
+                        {test.name}
+                      </a>
+                    ) : (
+                      test.name
+                    )}
                   </cite>
                   <span className="text-[10px] text-text-muted font-mono uppercase tracking-wider block mt-0.5">
-                    {test.role}
+                    {test.company ? `${test.role}, ${test.company}` : test.role}
                   </span>
                 </div>
               </div>
