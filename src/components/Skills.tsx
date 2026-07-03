@@ -121,21 +121,21 @@ export default function Skills() {
   };
 
   return (
-    <section id="skills" className="py-20 px-6 md:px-12 bg-transparent relative z-10">
-      <div className="max-w-5xl mx-auto">
+    <section id="skills" className="py-24 px-6 md:px-12 bg-transparent relative z-10">
+      <div className="max-w-7xl mx-auto">
         
-        {/* Editorial Heading with minimal styling and glowing text */}
-        <div className="mb-12 flex flex-col md:flex-row md:items-end justify-between border-b border-white/5 pb-6">
+        {/* Editorial Heading matching Services section size */}
+        <div className="mb-16 md:mb-24 flex flex-col md:flex-row md:items-end justify-between border-b border-white/5 pb-8">
           <div>
-            <span className="text-[10px] uppercase tracking-widest text-electric-blue/80 font-bold font-space block mb-1">
+            <span className="text-xs uppercase tracking-widest text-electric-blue font-bold font-space block mb-2">
               Stack
             </span>
-            <h2 className="font-space font-bold text-3xl md:text-4xl tracking-tight text-white hover:text-transparent bg-clip-text hover:bg-gradient-to-r hover:from-white hover:to-electric-blue transition-colors duration-300">
-              Tech Stack
+            <h2 className="font-space font-extrabold text-4xl md:text-6xl tracking-tight text-white">
+              TECH STACK
             </h2>
           </div>
-          <p className="text-text-muted max-w-sm mt-3 md:mt-0 font-sora font-light text-xs md:text-sm">
-            Compact showcase of technologies I build and deploy with.
+          <p className="text-text-muted max-w-md mt-4 md:mt-0 font-sora font-light text-sm md:text-base">
+            Compact showcase of technologies I use to build scalable, high-performance web applications.
           </p>
         </div>
 
