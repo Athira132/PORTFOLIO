@@ -98,7 +98,7 @@ export default function Hero() {
           </motion.div>
         </motion.div>
 
-        {/* Right Side: Portrait, mockup, code card overlays */}
+        {/* Right Side: Portrait, code card overlay, floating tech badges */}
         <div className="lg:col-span-5 relative w-full h-[500px] md:h-[600px] flex items-center justify-center">
           
           {/* Base Glowing Radial Circle */}
@@ -110,7 +110,7 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.9, y: 30 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] as any }}
-            className="relative w-[280px] h-[360px] md:w-[320px] md:h-[420px] rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-electric-blue/10 animate-float"
+            className="relative w-[300px] h-[390px] md:w-[350px] md:h-[460px] rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-electric-blue/10 animate-float"
           >
             {/* Subtle blue rim light */}
             <div className="absolute inset-0 bg-gradient-to-tr from-electric-blue/15 to-transparent pointer-events-none z-10 opacity-70" />
@@ -119,7 +119,7 @@ export default function Hero() {
               alt="Athira Developer Portrait"
               fill
               className="object-cover brightness-[0.9] scale-105 hover:scale-100 transition-transform duration-700"
-              sizes="(max-width: 768px) 280px, 320px"
+              sizes="(max-width: 768px) 300px, 350px"
               priority
             />
             {/* Dark gradient overlay */}
@@ -127,45 +127,13 @@ export default function Hero() {
           </motion.div>
 
           {/* Floating UI Elements & Mockups */}
-          
-          {/* Laptop Mockup Bubble */}
-          <motion.div
-            initial={{ opacity: 0, x: 50, y: -50 }}
-            animate={{ opacity: 1, x: 0, y: 0 }}
-            transition={{ delay: 0.6, duration: 1.2, ease: [0.16, 1, 0.3, 1] as any }}
-            className="absolute top-10 right-0 md:-right-8 w-44 h-32 rounded-xl overflow-hidden border border-white/10 shadow-xl bg-black/60 backdrop-blur-sm animate-float-delayed"
-          >
-            <Image
-              src="/images/kitab.png"
-              alt="Kitab Preview"
-              fill
-              className="object-cover"
-              sizes="176px"
-            />
-          </motion.div>
-
-          {/* Mobile Mockup Bubble */}
-          <motion.div
-            initial={{ opacity: 0, x: -60, y: 60 }}
-            animate={{ opacity: 1, x: 0, y: 0 }}
-            transition={{ delay: 0.8, duration: 1.2, ease: [0.16, 1, 0.3, 1] as any }}
-            className="absolute bottom-8 left-0 md:-left-8 w-24 h-44 rounded-xl overflow-hidden border border-white/10 shadow-xl bg-black/60 backdrop-blur-sm animate-float"
-          >
-            <Image
-              src="/images/cafe.jpg"
-              alt="Cafe Preview"
-              fill
-              className="object-cover"
-              sizes="96px"
-            />
-          </motion.div>
 
           {/* Tech Card Overlay: Terminal / Code */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1, duration: 1 }}
-            className="absolute bottom-16 right-4 md:right-0 glass-panel px-4 py-3 rounded-xl flex items-center space-x-3 border border-white/10 shadow-lg text-xs"
+            className="absolute bottom-6 -right-2 md:-right-8 glass-panel px-4 py-3 rounded-xl flex items-center space-x-3 border border-white/10 shadow-lg text-xs animate-float-delayed"
           >
             <Terminal className="text-electric-blue animate-pulse" size={16} />
             <div className="font-mono text-left text-[10px]">
@@ -181,7 +149,7 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 1.2, duration: 0.5 }}
-            className="absolute top-1/3 left-4 md:-left-4 w-10 h-10 rounded-lg bg-[#0d0d0d] border border-white/10 flex items-center justify-center text-electric-blue shadow-lg"
+            className="absolute top-1/4 -left-4 md:-left-8 w-10 h-10 rounded-lg bg-[#0d0d0d] border border-white/10 flex items-center justify-center text-electric-blue shadow-lg animate-float"
           >
             <Cpu size={20} />
           </motion.div>
@@ -190,7 +158,7 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 1.3, duration: 0.5 }}
-            className="absolute top-1/4 right-1/4 w-8 h-8 rounded-lg bg-[#0d0d0d] border border-white/10 flex items-center justify-center text-soft-cyan shadow-lg"
+            className="absolute top-12 right-6 md:right-10 w-8 h-8 rounded-lg bg-[#0d0d0d] border border-white/10 flex items-center justify-center text-soft-cyan shadow-lg animate-float-delayed"
           >
             <Layers size={16} />
           </motion.div>
