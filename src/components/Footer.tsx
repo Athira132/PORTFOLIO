@@ -108,12 +108,12 @@ export default function Footer() {
         {/* Left Side: Brand and copyright */}
         <div className="flex flex-col items-center md:items-start space-y-2">
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 rounded-full border border-white/10 bg-white/5 flex items-center justify-center overflow-hidden relative p-1.5 hover:border-electric-blue/40 hover:shadow-lg hover:shadow-electric-blue/10 transition-all duration-300">
+            <div className="w-10 h-10 rounded-full border border-white/10 bg-white/5 flex items-center justify-center overflow-hidden relative p-1.5 hover:border-electric-blue/40 hover:shadow-lg hover:shadow-electric-blue/10 transition-all duration-300">
               <Image
                 src="/images/logo.png"
                 alt="aathi.dev logo"
-                width={32}
-                height={32}
+                width={40}
+                height={40}
                 className="object-contain w-full h-full brightness-0 invert"
               />
             </div>
