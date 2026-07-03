@@ -60,25 +60,84 @@ const InstagramIcon = ({ size = 20, className = "" }) => (
   </svg>
 );
 
+const FacebookIcon = ({ size = 20, className = "" }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+  >
+    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+  </svg>
+);
+
+const TwitterIcon = ({ size = 20, className = "" }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+  >
+    <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
+    <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
+  </svg>
+);
+
 export default function Contact() {
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [formData, setFormData] = useState({ name: "", email: "", subject: "", message: "" });
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (!formData.name || !formData.email || !formData.subject || !formData.message) {
+      alert("Please fill in all fields before sending.");
+      return;
+    }
+
     setStatus("sending");
-    
-    // Simulate API call
+
+    const phoneNumber = "918606720360";
+    const messageText = `Hello Athira,
+
+I saw your portfolio and would like to get in touch.
+
+Name: ${formData.name}
+Email: ${formData.email}
+Subject: ${formData.subject}
+
+Message:
+${formData.message}`;
+
+    const encodedMessage = encodeURIComponent(messageText);
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+    // Simulate short delay then redirect
     setTimeout(() => {
       setStatus("success");
-      setFormData({ name: "", email: "", message: "" });
+      setFormData({ name: "", email: "", subject: "", message: "" });
+      window.location.href = whatsappUrl;
     }, 1500);
   };
 
   const socialLinks = [
     { name: "GitHub", href: "https://github.com/Athira132", icon: <GithubIcon size={20} /> },
-    { name: "LinkedIn", href: "#", icon: <LinkedinIcon size={20} /> },
-    { name: "Instagram", href: "https://instagram.com", icon: <InstagramIcon size={20} /> },
+    { name: "LinkedIn", href: "https://www.linkedin.com/feed/", icon: <LinkedinIcon size={20} /> },
+    { name: "Instagram", href: "https://www.instagram.com/aathidevloper/?hl=en", icon: <InstagramIcon size={20} /> },
+    { name: "Facebook", href: "https://www.facebook.com/", icon: <FacebookIcon size={20} /> },
+    { name: "Twitter/X", href: "https://x.com/Aathi__dev", icon: <TwitterIcon size={20} /> },
   ];
 
   return (
@@ -157,7 +216,7 @@ export default function Contact() {
             </div>
 
             {/* Social handles list */}
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-4 flex-wrap gap-y-3">
               {socialLinks.map((social) => (
                 <a
                   key={social.name}
@@ -186,9 +245,9 @@ export default function Contact() {
                   <div className="w-16 h-16 rounded-full bg-electric-blue/10 border border-electric-blue flex items-center justify-center text-electric-blue mb-6">
                     <Send size={24} className="animate-bounce" />
                   </div>
-                  <h4 className="font-space font-bold text-2xl text-white mb-2">Message Sent!</h4>
+                  <h4 className="font-space font-bold text-2xl text-white mb-2">Redirecting...</h4>
                   <p className="text-text-muted font-light text-sm max-w-xs">
-                    Thank you for reaching out. Athira will get back to you shortly.
+                    Opening WhatsApp to send your message. Thank you for reaching out!
                   </p>
                   <button
                     onClick={() => setStatus("idle")}
@@ -231,6 +290,22 @@ export default function Contact() {
                     />
                   </div>
 
+                  {/* Subject field */}
+                  <div className="flex flex-col text-left">
+                    <label htmlFor="subject" className="text-[10px] font-mono uppercase tracking-wider text-text-muted mb-2">
+                      Subject
+                    </label>
+                    <input
+                      type="text"
+                      id="subject"
+                      required
+                      value={formData.subject}
+                      onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+                      className="px-4 py-3.5 rounded-xl bg-white/[0.03] border border-white/5 text-white placeholder-white/20 text-sm font-space focus:outline-none focus:border-electric-blue/50 focus:bg-white/[0.05] transition-all duration-300"
+                      placeholder="e.g. Project Inquiry"
+                    />
+                  </div>
+
                   {/* Message field */}
                   <div className="flex flex-col text-left">
                     <label htmlFor="message" className="text-[10px] font-mono uppercase tracking-wider text-text-muted mb-2">
@@ -251,9 +326,9 @@ export default function Contact() {
                   <button
                     type="submit"
                     disabled={status === "sending"}
-                    className="w-full py-4 rounded-xl bg-electric-blue hover:bg-electric-blue-dark text-white font-space font-bold tracking-wider text-sm transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-electric-blue/20 disabled:opacity-50"
+                    className="w-full py-4 rounded-xl bg-electric-blue hover:bg-electric-blue-dark text-white font-space font-bold tracking-wider text-sm transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-electric-blue/20 disabled:opacity-50 cursor-pointer"
                   >
-                    <span>{status === "sending" ? "Sending Message..." : "Send Message"}</span>
+                    <span>{status === "sending" ? "Preparing WhatsApp..." : "Send Message"}</span>
                     <ArrowUpRight size={18} />
                   </button>
                 </form>

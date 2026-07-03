@@ -57,7 +57,50 @@ const InstagramIcon = ({ size = 20, className = "" }) => (
   </svg>
 );
 
+const FacebookIcon = ({ size = 20, className = "" }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+  >
+    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+  </svg>
+);
+
+const TwitterIcon = ({ size = 20, className = "" }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+  >
+    <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
+    <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
+  </svg>
+);
+
 export default function Footer() {
+  const socialLinks = [
+    { name: "GitHub", href: "https://github.com/Athira132", icon: <GithubIcon size={18} /> },
+    { name: "LinkedIn", href: "https://www.linkedin.com/feed/", icon: <LinkedinIcon size={18} /> },
+    { name: "Instagram", href: "https://www.instagram.com/aathidevloper/?hl=en", icon: <InstagramIcon size={18} /> },
+    { name: "Facebook", href: "https://www.facebook.com/", icon: <FacebookIcon size={18} /> },
+    { name: "Twitter/X", href: "https://x.com/Aathi__dev", icon: <TwitterIcon size={18} /> },
+  ];
+
   return (
     <footer className="w-full bg-[#050505] border-t border-white/5 py-12 px-6 md:px-12 relative z-10">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
@@ -91,34 +134,19 @@ export default function Footer() {
         </div>
 
         {/* Right Side: Social icons and Top arrow */}
-        <div className="flex items-center space-x-6">
-          <a
-            href="https://github.com/Athira132"
-            target="_blank"
-            rel="noreferrer"
-            className="text-text-muted hover:text-white transition-colors duration-300"
-            aria-label="GitHub"
-          >
-            <GithubIcon size={18} />
-          </a>
-          <a
-            href="#"
-            target="_blank"
-            rel="noreferrer"
-            className="text-text-muted hover:text-white transition-colors duration-300"
-            aria-label="LinkedIn"
-          >
-            <LinkedinIcon size={18} />
-          </a>
-          <a
-            href="https://instagram.com"
-            target="_blank"
-            rel="noreferrer"
-            className="text-text-muted hover:text-white transition-colors duration-300"
-            aria-label="Instagram"
-          >
-            <InstagramIcon size={18} />
-          </a>
+        <div className="flex items-center space-x-4 md:space-x-6">
+          {socialLinks.map((social) => (
+            <a
+              key={social.name}
+              href={social.href}
+              target="_blank"
+              rel="noreferrer"
+              className="text-text-muted hover:text-white transition-colors duration-300"
+              aria-label={social.name}
+            >
+              {social.icon}
+            </a>
+          ))}
           <a
             href="#home"
             className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-text-muted hover:text-white hover:border-electric-blue transition-all duration-300"
