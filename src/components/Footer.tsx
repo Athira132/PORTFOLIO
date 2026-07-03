@@ -114,7 +114,7 @@ export default function Footer() {
                 alt="aathi.dev logo"
                 width={32}
                 height={32}
-                className="object-contain w-full h-full"
+                className="object-contain w-full h-full brightness-0 invert"
               />
             </div>
             <span className="font-space font-bold tracking-widest text-sm text-white">

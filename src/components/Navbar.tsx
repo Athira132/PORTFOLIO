@@ -47,7 +47,7 @@ export default function Navbar() {
               alt="aathi.dev logo"
               width={40}
               height={40}
-              className="object-contain w-full h-full"
+              className="object-contain w-full h-full brightness-0 invert"
             />
           </div>
           <span className="font-space font-bold text-xl tracking-wider text-white group-hover:text-electric-blue transition-colors duration-300">

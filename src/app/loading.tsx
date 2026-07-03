@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 export default function Loading() {
@@ -27,9 +28,15 @@ export default function Loading() {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          className="w-16 h-16 rounded-2xl border border-white/20 flex items-center justify-center font-space font-extrabold text-2xl text-white bg-transparent relative"
+          className="w-16 h-16 rounded-full border border-white/10 bg-white/5 flex items-center justify-center overflow-hidden relative p-2.5"
         >
-          AD
+          <Image
+            src="/images/logo.png"
+            alt="aathi.dev logo"
+            width={64}
+            height={64}
+            className="object-contain w-full h-full brightness-0 invert"
+          />
         </motion.div>
 
         {/* Loading Progress Bar Indicator */}
