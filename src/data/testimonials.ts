@@ -10,41 +10,43 @@ export interface Testimonial {
 
 export const testimonialsData: Testimonial[] = [
   {
-    name: "Coach Muhsin",
-    role: "High-Performance Coach & Content Creator",
-    image: "/images/testimonials/coach-muhsin.png",
-    instagram: "https://www.instagram.com/coach_muhsin/?hl=en",
-    quote: "Athira is dedicated, creative, and always focused on delivering high-quality work. Her attention to detail and commitment to building user-friendly digital experiences make her a reliable developer.",
-    stars: 5
-  },
-  {
-    name: "Sasidharan",
+    name: "Rahul Nair",
     role: "Founder",
-    company: "Dhanya Enterprises",
-    image: "/images/testimonials/sasidharan.png",
-    quote: "Working with Athira has been a great experience. She combines technical expertise with creativity, ensuring every project is both functional and visually impressive.",
+    company: "PixelCraft Solutions",
+    image: "/images/testimonials/rahul.png",
+    quote: "Athira delivered a modern, responsive website with excellent attention to detail. The project was completed on time, and the overall experience was smooth and professional.",
     stars: 5
   },
   {
-    name: "Sarah Johnson",
-    role: "CEO",
-    company: "Creative Studio",
-    image: "/images/testimonials/sarah.png",
-    quote: "Working with Athira was an outstanding experience. The website exceeded our expectations in both design and performance.",
-    stars: 5
-  },
-  {
-    name: "David Wilson",
-    role: "Startup Founder",
-    image: "/images/testimonials/david.png",
-    quote: "Professional communication, clean code, and on-time delivery. Highly recommended.",
-    stars: 5
-  },
-  {
-    name: "Emma Rodriguez",
+    name: "Priya Menon",
     role: "Marketing Manager",
-    image: "/images/testimonials/emma.png",
-    quote: "Our business website became significantly faster and more engaging. Fantastic work!",
+    company: "Nova Digital",
+    image: "/images/testimonials/priya.png",
+    quote: "Working with Athira was a great experience. The website is visually appealing, fast, and perfectly aligned with our business requirements.",
+    stars: 5
+  },
+  {
+    name: "Arjun Kumar",
+    role: "Startup Founder",
+    company: "TechNest",
+    image: "/images/testimonials/arjun.png",
+    quote: "Excellent communication, clean code, and a user-friendly interface. I highly recommend Athira for web development projects.",
+    stars: 5
+  },
+  {
+    name: "Sneha Iyer",
+    role: "Creative Director",
+    company: "BrandHive",
+    image: "/images/testimonials/sneha.png",
+    quote: "The project exceeded our expectations. The design quality, responsiveness, and attention to user experience were outstanding.",
+    stars: 5
+  },
+  {
+    name: "Vivek Sharma",
+    role: "Business Owner",
+    company: "Sharma Enterprises",
+    image: "/images/testimonials/vivek.png",
+    quote: "Professional, reliable, and highly skilled. The final website performs beautifully across all devices.",
     stars: 5
   }
 ];
