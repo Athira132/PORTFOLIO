@@ -2,57 +2,33 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Code, Layout, Sparkles, Search, Megaphone, Palette, Video, Monitor } from "lucide-react";
+import { Code2, MonitorSmartphone, ShoppingCart, Wrench } from "lucide-react";
 
 export default function Services() {
   const services = [
     {
-      icon: <Code size={24} />,
-      title: "Web Development",
-      description: "Custom responsive website development and complex full-stack MERN applications built with React, Node.js, Express, and MongoDB. Optimized for performance and scalability.",
-      features: ["MERN Stack Applications", "React & Next.js Frontend", "Scalable Database Layers"],
+      icon: <Code2 size={24} />,
+      title: "Full-Stack Web Development",
+      description: "Build fast, scalable, and secure web applications using modern technologies.",
+      features: ["Custom Web Applications", "MERN Stack Development", "API Integration"],
     },
     {
-      icon: <Layout size={24} />,
-      title: "UI/UX Design",
-      description: "Clean design systems, interactive prototypes, and modern interface designs. Focused on crafting intuitive user paths and responsive grids using Figma.",
-      features: ["User Experience Mapping", "Responsive UI Wireframing", "Figma Interactive Design"],
+      icon: <MonitorSmartphone size={24} />,
+      title: "Responsive Website Development",
+      description: "Design and develop responsive websites that work perfectly across all devices.",
+      features: ["Mobile-First Design", "Landing Pages", "Business Websites"],
     },
     {
-      icon: <Sparkles size={24} />,
-      title: "Landing Pages",
-      description: "High-impact portfolio websites, conversion-focused landing pages, and minimal business websites designed to build your unique digital presence.",
-      features: ["Personal Portfolio Sites", "High-Converting Landers", "Modern Business Interfaces"],
+      icon: <ShoppingCart size={24} />,
+      title: "E-Commerce Solutions",
+      description: "Create modern online stores with secure payments and user-friendly experiences.",
+      features: ["Product Management", "Payment Gateway Integration", "Order Management"],
     },
     {
-      icon: <Search size={24} />,
-      title: "SEO & Branding",
-      description: "Rigorous technical search engine optimization and digital identity design to improve ranking, speed scores, and organic brand visibility.",
-      features: ["Technical SEO Optimization", "Core Web Vitals Audit", "Consistent Brand Guidelines"],
-    },
-    {
-      icon: <Megaphone size={24} />,
-      title: "Digital Marketing",
-      description: "Comprehensive marketing strategies, paid campaigns, conversion rate audits, and analytics dashboards to track user engagement.",
-      features: ["Paid Campaign Strategy", "Conversion Rate Audits", "Detailed Analytics Tracking"],
-    },
-    {
-      icon: <Palette size={24} />,
-      title: "Graphic Design",
-      description: "Premium visual assets, custom logo designs, pitch decks, and digital illustrations crafted to represent your unique brand value.",
-      features: ["Custom Brand Identity", "Vector Logo Designs", "Premium Pitch Decks"],
-    },
-    {
-      icon: <Video size={24} />,
-      title: "Video Editing",
-      description: "Dynamic video editing, motion graphics, promo videos, and social media media reels to engage your target audience.",
-      features: ["Social Reels & Promos", "Dynamic Motion Graphics", "Audio Engineering & Sync"],
-    },
-    {
-      icon: <Monitor size={24} />,
-      title: "Responsive Websites",
-      description: "Pixel-perfect mobile-first designs optimized for all screens, standard cross-browser support, and high performance.",
-      features: ["Mobile-First Development", "Cross-Browser Testing", "Core Web Vitals Checked"],
+      icon: <Wrench size={24} />,
+      title: "Website Maintenance & Optimization",
+      description: "Maintain, optimize, and improve existing websites for speed, security, and SEO.",
+      features: ["Performance Optimization", "Bug Fixes", "SEO Improvements"],
     },
   ];
 
@@ -71,7 +47,7 @@ export default function Services() {
             </h2>
           </div>
           <p className="text-text-muted max-w-md mt-4 md:mt-0 font-sora font-light text-sm md:text-base">
-            Providing high-end end-to-end design, development, and digital marketing strategies.
+            Providing high-end web development, e-commerce systems, and performance tuning.
           </p>
         </div>
 
@@ -95,7 +71,7 @@ export default function Services() {
               </div>
 
               {/* Title */}
-              <h3 className="font-space font-bold text-xl text-white mb-4 group-hover:text-electric-blue transition-colors duration-300">
+              <h3 className="font-space font-bold text-lg text-white mb-4 group-hover:text-electric-blue transition-colors duration-300">
                 {service.title}
               </h3>
 
