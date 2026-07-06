@@ -10,6 +10,22 @@ export interface Testimonial {
 
 export const testimonialsData: Testimonial[] = [
   {
+    name: "Coach Muhsin",
+    role: "Fitness Coach & Entrepreneur",
+    image: "/images/testimonials/coach-muhsin.png",
+    instagram: "https://www.instagram.com/coach_muhsin/?hl=en",
+    quote: "Athira developed a professional website with excellent attention to detail. The final result perfectly represents my brand and provides a smooth user experience. I truly appreciate the dedication and quality of work.",
+    stars: 5
+  },
+  {
+    name: "Sasidharan",
+    role: "Founder",
+    company: "Dhanya Enterprises",
+    image: "/images/testimonials/sasidharan.png",
+    quote: "Working with Athira was a great experience. The website is modern, responsive, and professionally crafted. The communication throughout the project was excellent, and the final product exceeded our expectations.",
+    stars: 5
+  },
+  {
     name: "Rahul Nair",
     role: "Founder",
     company: "PixelCraft Solutions",
@@ -31,22 +47,6 @@ export const testimonialsData: Testimonial[] = [
     company: "TechNest",
     image: "/images/testimonials/arjun.png",
     quote: "Excellent communication, clean code, and a user-friendly interface. I highly recommend Athira for web development projects.",
-    stars: 5
-  },
-  {
-    name: "Sneha Iyer",
-    role: "Creative Director",
-    company: "BrandHive",
-    image: "/images/testimonials/sneha.png",
-    quote: "The project exceeded our expectations. The design quality, responsiveness, and attention to user experience were outstanding.",
-    stars: 5
-  },
-  {
-    name: "Vivek Sharma",
-    role: "Business Owner",
-    company: "Sharma Enterprises",
-    image: "/images/testimonials/vivek.png",
-    quote: "Professional, reliable, and highly skilled. The final website performs beautifully across all devices.",
     stars: 5
   }
 ];
