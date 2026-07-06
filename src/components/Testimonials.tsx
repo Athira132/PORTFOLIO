@@ -7,11 +7,11 @@ import { testimonialsData } from "../data/testimonials";
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="py-24 px-6 md:px-12 bg-transparent relative z-10 overflow-hidden">
-      <div className="max-w-7xl mx-auto">
+    <section id="testimonials" className="py-24 px-6 md:px-12 bg-transparent relative z-10 overflow-hidden w-full">
+      <div className="max-w-7xl mx-auto w-full">
         
-        {/* Editorial Heading */}
-        <div className="mb-16 md:mb-24 flex flex-col md:flex-row md:items-end justify-between border-b border-white/5 pb-8">
+        {/* Editorial Heading - Kept completely static & fixed in place */}
+        <div className="mb-12 flex flex-col md:flex-row md:items-end justify-between border-b border-white/5 pb-8">
           <div>
             <span className="text-xs uppercase tracking-widest text-electric-blue font-bold font-space block mb-2">
               Reviews
@@ -20,13 +20,13 @@ export default function Testimonials() {
               TESTIMONIALS
             </h2>
           </div>
-          <p className="text-text-muted max-w-xs mt-4 md:mt-0 font-sora font-light text-xs md:text-sm">
-            Feedback from startup founders, agency leads, and professional connections.
+          <p className="text-text-muted max-w-md mt-4 md:mt-0 font-sora font-light text-sm">
+            What clients and collaborators say about working with me.
           </p>
         </div>
 
-        {/* Continuous Infinite Testimonial Marquee Carousel */}
-        <div className="w-full overflow-hidden mask-marquee py-4 relative">
+        {/* Continuous Infinite Testimonial Marquee Carousel - Animating only the cards */}
+        <div className="w-full overflow-hidden mask-marquee py-4 mt-12 relative">
           <div className="flex space-x-6 animate-marquee hover:[animation-play-state:paused] active:[animation-play-state:paused] w-max select-none cursor-grab active:cursor-grabbing">
             
             {/* First Set of Testimonials */}
