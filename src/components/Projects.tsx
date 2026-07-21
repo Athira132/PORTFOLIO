@@ -26,7 +26,26 @@ const GithubIcon = ({ size = 20, className = "" }) => (
 export default function Projects() {
   const projects = [
     {
+      title: "Phoenix Cruise",
+      category: "Travel & Tourism Website",
+      description: "A premium website for a Kerala backwater cruise and houseboat experience, designed to showcase cruises, experiences, destinations, galleries, and booking options.",
+      technologies: ["Next.js", "React", "Tailwind CSS", "Booking System", "Responsive Web Design"],
+      image: "/images/phoenixcruise.jpg",
+      liveLink: "https://phoenixcruise.in/",
+      githubLink: "https://github.com/Athira132",
+    },
+    {
+      title: "iPhonix Mobile Service Centre",
+      category: "Business & Service Website",
+      description: "A premium responsive website for a mobile repair and service centre, showcasing repair services, device support, business information, and customer contact options.",
+      technologies: ["React", "Next.js", "Tailwind CSS", "Service Portal", "Responsive Web Design"],
+      image: "/images/iphonix.jpg",
+      liveLink: "https://iphonix.in/",
+      githubLink: "https://github.com/Athira132",
+    },
+    {
       title: "Kitab — Bookshop Management System",
+      category: "Full Stack MERN Application",
       description: "A complete MERN-stack Bookshop Management System featuring a customer storefront, authenticated admin dashboard, inventory management, bulk CSV catalog import, secure ordering, and staff billing workflow.",
       technologies: ["React", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
       image: "/images/kitab.png",
@@ -35,6 +54,7 @@ export default function Projects() {
     },
     {
       title: "Cafe Management System",
+      category: "Full Stack Web System",
       description: "A multi-role cafe management system with custom dashboards for Owners, Staff, and Customers. Includes secure JWT token authentication, granular Role-Based Access Control, live order tracking, menu editors, and revenue analytics.",
       technologies: ["Node.js", "Express", "JavaScript", "HTML5", "CSS3"],
       image: "/images/cafe.jpg",
@@ -51,14 +71,14 @@ export default function Projects() {
         <div className="mb-16 md:mb-24 flex flex-col md:flex-row md:items-end justify-between border-b border-white/5 pb-8">
           <div>
             <span className="text-xs uppercase tracking-widest text-electric-blue font-bold font-space block mb-2">
-              Portfolio
+              Portfolio &amp; Client Work
             </span>
             <h2 className="font-space font-extrabold text-4xl md:text-6xl tracking-tight text-white">
               PROJECTS
             </h2>
           </div>
           <p className="text-text-muted max-w-md mt-4 md:mt-0 font-sora font-light text-sm md:text-base">
-            Curated list of premium digital products combining clean coding with editorial graphic design layouts.
+            Real-world production client applications and full-stack digital products built for scale and performance.
           </p>
         </div>
 
@@ -93,7 +113,7 @@ export default function Projects() {
                       alt={project.title}
                       fill
                       loading="lazy"
-                      className="object-cover group-hover:scale-105 transition-transform duration-700 brightness-[0.85] group-hover:brightness-100"
+                      className="object-cover group-hover:scale-105 transition-transform duration-700 brightness-[0.9] group-hover:brightness-100"
                       sizes="(max-width: 1024px) 100vw, 700px"
                     />
                     
@@ -115,8 +135,8 @@ export default function Projects() {
                   className={`lg:col-span-5 ${isEven ? "lg:order-2" : "lg:order-1"} flex flex-col text-left`}
                 >
                   {/* Category index */}
-                  <span className="font-space text-xs font-bold text-electric-blue mb-2">
-                    0{idx + 1} / FEATURED WORK
+                  <span className="font-space text-xs font-bold text-electric-blue mb-2 uppercase tracking-wider">
+                    0{idx + 1} / {project.category}
                   </span>
 
                   {/* Title */}
@@ -149,7 +169,7 @@ export default function Projects() {
                       rel="noreferrer"
                       className="inline-flex items-center space-x-2 text-sm font-space font-bold tracking-wider text-white hover:text-electric-blue transition-colors duration-300"
                     >
-                      <span>Live Demo</span>
+                      <span>View Live Website</span>
                       <ArrowRight size={16} />
                     </a>
                     <a
