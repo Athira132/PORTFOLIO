@@ -27,11 +27,16 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
+      { url: "/icon.png", type: "image/png", sizes: "32x32" },
+      { url: "/icon-192.png", type: "image/png", sizes: "192x192" },
       { url: "/images/logo.png", type: "image/png" },
       { url: "/favicon.ico" },
     ],
     shortcut: "/images/logo.png",
-    apple: "/images/logo.png",
+    apple: [
+      { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
+      { url: "/images/logo.png" },
+    ],
   },
   keywords: [
     "Athira K",

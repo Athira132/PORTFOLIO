@@ -120,7 +120,7 @@ export default function Hero() {
               src="/images/profile-new.png"
               alt="Athira Developer Portrait"
               fill
-              className="object-cover brightness-[0.9] scale-105 hover:scale-100 transition-transform duration-700"
+              className="object-cover object-top brightness-[0.92] scale-105 hover:scale-100 transition-transform duration-700"
               sizes="(max-width: 768px) 300px, 350px"
               priority
             />
