@@ -2,10 +2,12 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { ExternalLink, ArrowRight } from "lucide-react";
+import { projects } from "@/data/projects";
 
-const GithubIcon = ({ size = 20, className = "" }) => (
+const GithubIcon = ({ size = 18, className = "" }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={size}
@@ -24,60 +26,15 @@ const GithubIcon = ({ size = 20, className = "" }) => (
 );
 
 export default function Projects() {
-  const projects = [
-    {
-      title: "Petals Ethnics and Jewellers",
-      category: "Full-Stack E-Commerce Website",
-      description: "Developed a responsive full-stack e-commerce platform for ethnic clothing and jewellery featuring dynamic product categories, size selection, shopping cart, wishlist, Razorpay payments, and a Supabase admin dashboard for inventory and order management.",
-      technologies: ["Angular 21", "TypeScript", "HTML", "CSS", "Supabase", "Razorpay", "GitHub", "Vercel"],
-      image: "/images/petalsethnic.jpg",
-      liveLink: "https://www.petalsethnic.com/",
-      githubLink: "https://github.com/Athira132",
-    },
-    {
-      title: "Kitab — Bookshop Management System",
-      category: "Full Stack MERN Application",
-      description: "A complete MERN-stack Bookshop Management System featuring a customer storefront, authenticated admin dashboard, inventory management, bulk CSV catalog import, secure ordering, and staff billing workflow.",
-      technologies: ["React", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
-      image: "/images/kitab.png",
-      liveLink: "https://kitab-bookshop.vercel.app/",
-      githubLink: "https://github.com/Athira132/PORTFOLIO",
-    },
-    {
-      title: "Cafe Management System",
-      category: "Full Stack Web System",
-      description: "A multi-role cafe management system with custom dashboards for Owners, Staff, and Customers. Includes secure JWT token authentication, granular Role-Based Access Control, live order tracking, menu editors, and revenue analytics.",
-      technologies: ["Node.js", "Express", "JavaScript", "HTML5", "CSS3"],
-      image: "/images/cafe.jpg",
-      liveLink: "https://github.com/Athira132",
-      githubLink: "https://github.com/Athira132",
-    },
-    {
-      title: "Phoenix Cruise",
-      category: "Travel & Tourism Website",
-      description: "A premium website for a Kerala backwater cruise and houseboat experience, designed to showcase cruises, experiences, destinations, galleries, and booking options.",
-      technologies: ["Next.js", "React", "Tailwind CSS", "Booking System", "Responsive Web Design"],
-      image: "/images/phoenixcruise.jpg",
-      liveLink: "https://phoenixcruise.in/",
-      githubLink: "https://github.com/Athira132",
-    },
-    {
-      title: "iPhonix Mobile Service Centre",
-      category: "Business & Service Website",
-      description: "A premium responsive website for a mobile repair and service centre, showcasing repair services, device support, business information, and customer contact options.",
-      technologies: ["React", "Next.js", "Tailwind CSS", "Service Portal", "Responsive Web Design"],
-      image: "/images/iphonix.jpg",
-      liveLink: "https://iphonix.in/",
-      githubLink: "https://github.com/Athira132",
-    },
-  ];
+  // Display the top 3 projects in the home section in the same row
+  const homeProjects = projects.slice(0, 3);
 
   return (
     <section id="projects" className="py-24 px-6 md:px-12 bg-transparent relative z-10">
       <div className="max-w-7xl mx-auto">
         
         {/* Editorial Heading */}
-        <div className="mb-16 md:mb-24 flex flex-col md:flex-row md:items-end justify-between border-b border-white/5 pb-8">
+        <div className="mb-14 md:mb-20 flex flex-col md:flex-row md:items-end justify-between border-b border-white/5 pb-8">
           <div>
             <span className="text-xs uppercase tracking-widest text-electric-blue font-bold font-space block mb-2">
               Portfolio &amp; Client Work
@@ -87,114 +44,120 @@ export default function Projects() {
             </h2>
           </div>
           <p className="text-text-muted max-w-md mt-4 md:mt-0 font-sora font-light text-sm md:text-base">
-            Real-world production client applications and full-stack digital products built for scale and performance.
+            Featured full-stack digital products and client solutions built for scale and performance.
           </p>
         </div>
 
-        {/* Projects List */}
-        <div className="space-y-24 md:space-y-36">
-          {projects.map((project, idx) => {
-            const isEven = idx % 2 === 0;
-            return (
-              <div
-                key={project.title}
-                className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center"
-              >
-                {/* Project Image Frame (Left on Even, Right on Odd) */}
-                <motion.div
-                  whileInView={{ opacity: 1, y: 0 }}
-                  initial={{ opacity: 0, y: 40 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] as any }}
-                  className={`lg:col-span-7 ${isEven ? "lg:order-1" : "lg:order-2"}`}
+        {/* 3 Projects Displayed in the Same Row on Desktop */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch mb-16">
+          {homeProjects.map((project, idx) => (
+            <motion.div
+              key={project.title}
+              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 35 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6, delay: idx * 0.15, ease: [0.16, 1, 0.3, 1] as any }}
+              className="glass-panel rounded-2xl border border-white/10 hover:border-electric-blue/40 bg-card-bg/60 p-5 md:p-6 flex flex-col justify-between group transition-all duration-500 hover:shadow-2xl hover:shadow-electric-blue/10 hover:-translate-y-1.5"
+            >
+              {/* Top part: Image and content */}
+              <div>
+                {/* Project Image Frame */}
+                <a
+                  href={project.liveLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block relative overflow-hidden rounded-xl border border-white/10 group-hover:border-electric-blue/40 aspect-[16/10] cursor-pointer mb-6"
                 >
+                  {/* Glowing effect inside */}
+                  <div className="absolute inset-0 bg-gradient-to-tr from-electric-blue/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
+                  
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    loading="lazy"
+                    className="object-cover group-hover:scale-105 transition-transform duration-700 brightness-[0.9] group-hover:brightness-100"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
+                  
+                  {/* View project overlay */}
+                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-20">
+                    <div className="w-11 h-11 rounded-full bg-white text-black flex items-center justify-center scale-75 group-hover:scale-100 transition-all duration-300 shadow-xl">
+                      <ExternalLink size={18} />
+                    </div>
+                  </div>
+                </a>
+
+                {/* Category index */}
+                <span className="font-space text-[11px] font-bold text-electric-blue mb-2 block uppercase tracking-wider">
+                  0{idx + 1} / {project.category}
+                </span>
+
+                {/* Title */}
+                <h3 className="font-space font-extrabold text-xl md:text-2xl text-white mb-3 group-hover:text-electric-blue transition-colors duration-300 line-clamp-1">
+                  {project.title}
+                </h3>
+
+                {/* Description */}
+                <p className="text-text-muted font-light text-xs md:text-sm leading-relaxed mb-5 line-clamp-3">
+                  {project.description}
+                </p>
+              </div>
+
+              {/* Bottom part: Tech badges and Action Links */}
+              <div>
+                {/* Tech stack badges */}
+                <div className="flex flex-wrap gap-1.5 mb-6">
+                  {project.technologies.slice(0, 5).map((tech) => (
+                    <span
+                      key={tech}
+                      className="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-medium tracking-wide bg-white/5 border border-white/10 text-white/80"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                  {project.technologies.length > 5 && (
+                    <span className="px-2 py-0.5 rounded-full text-[10px] font-mono font-medium tracking-wide bg-white/5 border border-white/10 text-white/50">
+                      +{project.technologies.length - 5}
+                    </span>
+                  )}
+                </div>
+
+                {/* Action buttons */}
+                <div className="flex items-center justify-between border-t border-white/5 pt-4">
                   <a
                     href={project.liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block relative group overflow-hidden rounded-2xl border border-white/10 hover:border-electric-blue/40 bg-card-bg shadow-2xl hover:shadow-xl hover:shadow-electric-blue/10 aspect-[16/10] cursor-pointer transition-all duration-500"
+                    className="inline-flex items-center space-x-1.5 text-xs font-space font-bold tracking-wider text-white hover:text-electric-blue transition-colors duration-300"
                   >
-                    {/* Glowing effect inside */}
-                    <div className="absolute inset-0 bg-gradient-to-tr from-electric-blue/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
-                    
-                    <Image
-                      src={project.image}
-                      alt={project.title}
-                      fill
-                      loading="lazy"
-                      className="object-cover group-hover:scale-105 transition-transform duration-700 brightness-[0.9] group-hover:brightness-100"
-                      sizes="(max-width: 1024px) 100vw, 700px"
-                    />
-                    
-                    {/* View project overlay */}
-                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-20">
-                      <div className="w-12 h-12 rounded-full bg-white text-black flex items-center justify-center scale-75 group-hover:scale-100 transition-all duration-300 shadow-xl">
-                        <ExternalLink size={20} />
-                      </div>
-                    </div>
+                    <span>Visit Website</span>
+                    <ArrowRight size={14} />
                   </a>
-                </motion.div>
-
-                {/* Project Info Block */}
-                <motion.div
-                  whileInView={{ opacity: 1, x: 0 }}
-                  initial={{ opacity: 0, x: isEven ? 50 : -50 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] as any }}
-                  className={`lg:col-span-5 ${isEven ? "lg:order-2" : "lg:order-1"} flex flex-col text-left`}
-                >
-                  {/* Category index */}
-                  <span className="font-space text-xs font-bold text-electric-blue mb-2 uppercase tracking-wider">
-                    0{idx + 1} / {project.category}
-                  </span>
-
-                  {/* Title */}
-                  <h3 className="font-space font-extrabold text-3xl md:text-4xl text-white mb-6 hover:text-electric-blue transition-colors duration-300">
-                    {project.title}
-                  </h3>
-
-                  {/* Description */}
-                  <p className="text-text-muted font-light text-sm leading-relaxed mb-6">
-                    {project.description}
-                  </p>
-
-                  {/* Tech stack badges */}
-                  <div className="flex flex-wrap gap-2 mb-8">
-                    {project.technologies.map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-3 py-1 rounded-full text-[10px] font-mono font-medium tracking-wide bg-white/5 border border-white/10 text-white/80"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-
-                  {/* Action buttons */}
-                  <div className="flex items-center space-x-6">
-                    <a
-                      href={project.liveLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center space-x-2 text-sm font-space font-bold tracking-wider text-white hover:text-electric-blue transition-colors duration-300"
-                    >
-                      <span>Visit Website</span>
-                      <ArrowRight size={16} />
-                    </a>
-                    <a
-                      href={project.githubLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center space-x-2 text-sm font-space font-bold tracking-wider text-text-muted hover:text-white transition-colors duration-300"
-                    >
-                      <GithubIcon size={16} />
-                      <span>GitHub</span>
-                    </a>
-                  </div>
-                </motion.div>
+                  <a
+                    href={project.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center space-x-1.5 text-xs font-space font-bold tracking-wider text-text-muted hover:text-white transition-colors duration-300"
+                  >
+                    <GithubIcon size={14} />
+                    <span>GitHub</span>
+                  </a>
+                </div>
               </div>
-            );
-          })}
+            </motion.div>
+          ))}
+        </div>
+
+        {/* View More Projects Button */}
+        <div className="flex justify-center">
+          <Link
+            href="/projects"
+            className="group px-8 py-4 rounded-full border border-electric-blue/40 bg-electric-blue/10 hover:bg-electric-blue text-white font-space font-bold text-sm tracking-wider transition-all duration-300 flex items-center space-x-3 shadow-lg shadow-electric-blue/15 hover:shadow-electric-blue/30 hover:scale-105"
+          >
+            <span>View More Projects</span>
+            <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform duration-300" />
+          </Link>
         </div>
 
       </div>
