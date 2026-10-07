@@ -157,7 +157,7 @@ ${formData.message}`;
 
   const socialLinks = [
     { name: "GitHub", href: "https://github.com/Athira132", icon: <GithubIcon size={20} /> },
-    { name: "LinkedIn", href: "https://www.linkedin.com/feed/", icon: <LinkedinIcon size={20} /> },
+    { name: "LinkedIn", href: "https://www.linkedin.com/in/athira-k-4b9107313/", icon: <LinkedinIcon size={20} /> },
     { name: "Instagram", href: "https://www.instagram.com/aathidevloper/?hl=en", icon: <InstagramIcon size={20} /> },
     { name: "Facebook", href: "https://www.facebook.com/", icon: <FacebookIcon size={20} /> },
     { name: "Twitter/X", href: "https://x.com/Aathi__dev", icon: <TwitterIcon size={20} /> },
@@ -250,7 +250,7 @@ ${formData.message}`;
                   key={social.name}
                   href={social.href}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 rounded-xl border border-white/5 hover:border-electric-blue/30 bg-white/5 flex items-center justify-center text-text-muted hover:text-white transition-all duration-300 shadow-lg hover:scale-105"
                   aria-label={social.name}
                 >

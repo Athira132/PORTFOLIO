@@ -26,21 +26,12 @@ const GithubIcon = ({ size = 20, className = "" }) => (
 export default function Projects() {
   const projects = [
     {
-      title: "Phoenix Cruise",
-      category: "Travel & Tourism Website",
-      description: "A premium website for a Kerala backwater cruise and houseboat experience, designed to showcase cruises, experiences, destinations, galleries, and booking options.",
-      technologies: ["Next.js", "React", "Tailwind CSS", "Booking System", "Responsive Web Design"],
-      image: "/images/phoenixcruise.jpg",
-      liveLink: "https://phoenixcruise.in/",
-      githubLink: "https://github.com/Athira132",
-    },
-    {
-      title: "iPhonix Mobile Service Centre",
-      category: "Business & Service Website",
-      description: "A premium responsive website for a mobile repair and service centre, showcasing repair services, device support, business information, and customer contact options.",
-      technologies: ["React", "Next.js", "Tailwind CSS", "Service Portal", "Responsive Web Design"],
-      image: "/images/iphonix.jpg",
-      liveLink: "https://iphonix.in/",
+      title: "Petals Ethnics and Jewellers",
+      category: "Full-Stack E-Commerce Website",
+      description: "Developed a responsive full-stack e-commerce platform for ethnic clothing and jewellery featuring dynamic product categories, size selection, shopping cart, wishlist, Razorpay payments, and a Supabase admin dashboard for inventory and order management.",
+      technologies: ["Angular 21", "TypeScript", "HTML", "CSS", "Supabase", "Razorpay", "GitHub", "Vercel"],
+      image: "/images/petalsethnic.jpg",
+      liveLink: "https://www.petalsethnic.com/",
       githubLink: "https://github.com/Athira132",
     },
     {
@@ -59,6 +50,24 @@ export default function Projects() {
       technologies: ["Node.js", "Express", "JavaScript", "HTML5", "CSS3"],
       image: "/images/cafe.jpg",
       liveLink: "https://github.com/Athira132",
+      githubLink: "https://github.com/Athira132",
+    },
+    {
+      title: "Phoenix Cruise",
+      category: "Travel & Tourism Website",
+      description: "A premium website for a Kerala backwater cruise and houseboat experience, designed to showcase cruises, experiences, destinations, galleries, and booking options.",
+      technologies: ["Next.js", "React", "Tailwind CSS", "Booking System", "Responsive Web Design"],
+      image: "/images/phoenixcruise.jpg",
+      liveLink: "https://phoenixcruise.in/",
+      githubLink: "https://github.com/Athira132",
+    },
+    {
+      title: "iPhonix Mobile Service Centre",
+      category: "Business & Service Website",
+      description: "A premium responsive website for a mobile repair and service centre, showcasing repair services, device support, business information, and customer contact options.",
+      technologies: ["React", "Next.js", "Tailwind CSS", "Service Portal", "Responsive Web Design"],
+      image: "/images/iphonix.jpg",
+      liveLink: "https://iphonix.in/",
       githubLink: "https://github.com/Athira132",
     },
   ];
@@ -102,7 +111,7 @@ export default function Projects() {
                   <a
                     href={project.liveLink}
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     className="block relative group overflow-hidden rounded-2xl border border-white/10 hover:border-electric-blue/40 bg-card-bg shadow-2xl hover:shadow-xl hover:shadow-electric-blue/10 aspect-[16/10] cursor-pointer transition-all duration-500"
                   >
                     {/* Glowing effect inside */}
@@ -166,16 +175,16 @@ export default function Projects() {
                     <a
                       href={project.liveLink}
                       target="_blank"
-                      rel="noreferrer"
+                      rel="noopener noreferrer"
                       className="inline-flex items-center space-x-2 text-sm font-space font-bold tracking-wider text-white hover:text-electric-blue transition-colors duration-300"
                     >
-                      <span>View Live Website</span>
+                      <span>Visit Website</span>
                       <ArrowRight size={16} />
                     </a>
                     <a
                       href={project.githubLink}
                       target="_blank"
-                      rel="noreferrer"
+                      rel="noopener noreferrer"
                       className="inline-flex items-center space-x-2 text-sm font-space font-bold tracking-wider text-text-muted hover:text-white transition-colors duration-300"
                     >
                       <GithubIcon size={16} />

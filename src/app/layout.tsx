@@ -45,6 +45,14 @@ export const metadata: Metadata = {
     "Digital Creator",
     "Kerala Web Developer",
     "India Web Developer",
+    "Petals Ethnics and Jewellers",
+    "Petals Ethnics",
+    "e-commerce website",
+    "Angular e-commerce",
+    "full-stack web development",
+    "Razorpay integration",
+    "Supabase",
+    "web developer portfolio",
   ],
   authors: [{ name: "Athira K", url: "https://aathi.dev" }],
   openGraph: {
@@ -107,7 +115,7 @@ export default function RootLayout({
     },
     "sameAs": [
       "https://github.com/Athira132",
-      "https://www.linkedin.com/feed/",
+      "https://www.linkedin.com/in/athira-k-4b9107313/",
       "https://www.instagram.com/aathidevloper/?hl=en",
       "https://www.facebook.com/",
       "https://x.com/Aathi__dev"

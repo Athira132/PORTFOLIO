@@ -112,7 +112,7 @@ const WhatsappIcon = ({ size = 20, className = "" }) => (
 export default function Footer() {
   const socialLinks = [
     { name: "GitHub", href: "https://github.com/Athira132", icon: <GithubIcon size={18} /> },
-    { name: "LinkedIn", href: "https://www.linkedin.com/feed/", icon: <LinkedinIcon size={18} /> },
+    { name: "LinkedIn", href: "https://www.linkedin.com/in/athira-k-4b9107313/", icon: <LinkedinIcon size={18} /> },
     { name: "Instagram", href: "https://www.instagram.com/aathidevloper/?hl=en", icon: <InstagramIcon size={18} /> },
     { name: "Facebook", href: "https://www.facebook.com/", icon: <FacebookIcon size={18} /> },
     { name: "Twitter/X", href: "https://x.com/Aathi__dev", icon: <TwitterIcon size={18} /> },
@@ -162,7 +162,7 @@ export default function Footer() {
               key={social.name}
               href={social.href}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="text-text-muted hover:text-white transition-colors duration-300"
               aria-label={social.name}
             >
