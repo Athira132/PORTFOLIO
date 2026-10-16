@@ -73,10 +73,16 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/profile-new.png",
-        width: 800,
-        height: 1000,
+        url: "/images/about-profile.png",
+        width: 1200,
+        height: 630,
         alt: "Athira K Portrait - Full Stack Web Developer",
+      },
+      {
+        url: "https://i.ibb.co/W402jq7p/file-00000000d8c482088231f7ecb13a032e.png",
+        width: 1086,
+        height: 1448,
+        alt: "Athira K Portrait",
       },
       {
         url: "/images/logo.png",
@@ -90,7 +96,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Athira K | Full Stack Web Developer | aathi.dev",
     description: "Portfolio of Athira K, a Full Stack Web Developer specializing in React, Node.js, MERN Stack, UI Design, and modern web applications.",
-    images: ["/images/profile-new.png"],
+    images: ["/images/about-profile.png"],
   },
   robots: {
     index: true,
@@ -116,7 +122,7 @@ export default function RootLayout({
     "name": "Athira K",
     "jobTitle": "Full Stack Web Developer",
     "url": "https://aathi.dev",
-    "image": "https://aathi.dev/images/profile-new.png",
+    "image": "https://aathi.dev/images/about-profile.png",
     "email": "athiraanuss12@gmail.com",
     "location": {
       "@type": "Place",

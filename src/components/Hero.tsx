@@ -117,15 +117,15 @@ export default function Hero() {
             {/* Subtle blue rim light */}
             <div className="absolute inset-0 bg-gradient-to-tr from-electric-blue/15 to-transparent pointer-events-none z-10 opacity-70" />
             <Image
-              src="/images/profile-new.png"
+              src="/images/about-profile.png"
               alt="Athira Developer Portrait"
               fill
-              className="object-cover object-top brightness-[0.92] scale-105 hover:scale-100 transition-transform duration-700"
+              className="object-cover object-center brightness-[0.95] scale-105 hover:scale-100 transition-transform duration-700"
               sizes="(max-width: 768px) 300px, 350px"
               priority
             />
             {/* Dark gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-dark-bg/90 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-dark-bg/80 via-transparent to-transparent" />
           </motion.div>
 
           {/* Floating UI Elements & Mockups */}

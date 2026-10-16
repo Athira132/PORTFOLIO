@@ -26,8 +26,8 @@ const GithubIcon = ({ size = 18, className = "" }) => (
 );
 
 export default function Projects() {
-  // Display the top 3 projects in the home section in the same row
-  const homeProjects = projects.slice(0, 3);
+  // Display the featured projects in the home section in the same row (top 3)
+  const homeProjects = projects.filter((project) => project.featured).slice(0, 3);
 
   return (
     <section id="projects" className="py-24 px-6 md:px-12 bg-transparent relative z-10">
@@ -54,8 +54,8 @@ export default function Projects() {
             <motion.div
               key={project.title}
               whileInView={{ opacity: 1, y: 0 }}
-              initial={{ opacity: 0, y: 35 }}
-              viewport={{ once: true, margin: "-50px" }}
+              initial={{ opacity: 0, y: 25 }}
+              viewport={{ once: true, amount: 0.1 }}
               transition={{ duration: 0.6, delay: idx * 0.15, ease: [0.16, 1, 0.3, 1] as any }}
               className="glass-panel rounded-2xl border border-white/10 hover:border-electric-blue/40 bg-card-bg/60 p-5 md:p-6 flex flex-col justify-between group transition-all duration-500 hover:shadow-2xl hover:shadow-electric-blue/10 hover:-translate-y-1.5"
             >

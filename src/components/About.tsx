@@ -52,10 +52,10 @@ export default function About() {
                 {/* Subtle blue rim light */}
                 <div className="absolute inset-0 bg-gradient-to-tr from-electric-blue/15 to-transparent pointer-events-none z-10 opacity-70" />
                 <Image
-                  src="/images/about-profile.png"
+                  src="https://i.ibb.co/W402jq7p/file-00000000d8c482088231f7ecb13a032e.png"
                   alt="Athira Profile"
                   fill
-                  className="object-cover brightness-[0.9] scale-105 group-hover:scale-100 transition-transform duration-700"
+                  className="object-cover object-top brightness-[0.94] scale-105 group-hover:scale-100 transition-transform duration-700"
                   sizes="(max-width: 768px) 300px, 380px"
                 />
                 
